@@ -1,0 +1,35 @@
+body{
+    background: #2D3F50;
+    padding-top: -10pv;
+}
+
+form{
+    background: #ffffff;
+    border-radius: 50px;
+}
+
+.form-container{
+    padding: 30px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    background-color: #2ECC71;
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    border: 1px solid;
+    color: #2ECC71;
+}
+
+img{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
