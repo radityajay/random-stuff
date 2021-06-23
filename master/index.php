@@ -1,5 +1,7 @@
 <?php
  include_once "../autoload.php";
+ require_once $BASE_URL . "/models/Store.php";
+
 
  $role = ["Administrator", "Petugas"];
     if(!in_array($_SESSION['role'], $role)){
@@ -153,6 +155,41 @@
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../dashboard/index.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../topProd/index.php"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Top Produk</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../top5store/index.php"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Top Store</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../topKat/index.php"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Top Kategori</span></a></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Top Produk Store </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <?php
+                                foreach($store->all() as $data){
+                            ?>
+                                <li class="sidebar-item"><a href="../topProdStore/index.php?id=<?= $data['id_store'] ?>" class="sidebar-link"><span
+                                            class="hide-menu"> <?= $data['nama_store'] ?>
+                                        </span></a>
+                                </li>
+                                <!-- <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                                            class="hide-menu"> ChartJs
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Knob Chart
+                                        </span></a>
+                                </li> -->
+                                <?php
+                                }
+                            ?>
+                            </ul>
+                        </li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Form & Table</span></li>
                         <?php
@@ -238,23 +275,6 @@
     <script src="../bootstrap/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../bootstrap/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../bootstrap/dist/js/pages/dashboards/dashboard1.min.js"></script>
-    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../bootstrap/assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../bootstrap/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- apps -->
-    <!-- apps -->
-    <script src="../bootstrap/dist/js/app-style-switcher.js"></script>
-    <script src="../bootstrap/dist/js/feather.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="../bootstrap/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../bootstrap/assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <!-- themejs -->
-    <!--Menu sidebar -->
-    <script src="../bootstrap/dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="../bootstrap/dist/js/custom.min.js"></script>
     <!--This page plugins -->
     <!-- <script src="../bootstrap/assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../bootstrap/dist/js/pages/datatable/datatable-basic.init.js"></script> -->

@@ -115,6 +115,13 @@ else{
               </div>
 
               <div class="col-lg-9">
+              <?php
+                                if($dataKat['id_store']){
+                                    ?>
+                                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1"><?= $dataKat['nama_store'] ?></h4>
+                                <?php
+                                } 
+                                ?>
                     <div class="row">
                         <?php
                         foreach($inventaris->withAll() as $data){
