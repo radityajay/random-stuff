@@ -30,7 +30,7 @@ require_once $BASE_URL . "/models/Vendor.php";
            <div class="container py-5 mt-5">
              <div class="row">
               <div class="col-lg-3">
-                <h1 class="h2 pb-4">Categories</h1>
+                <!-- <h1 class="h2 pb-4">Categories</h1> -->
                 <?php
                 include "sidebar.php";
                 ?>

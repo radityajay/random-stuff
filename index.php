@@ -295,6 +295,7 @@
                 <!--End Controls-->
             </div>
             </section>
+            <?php include "footer.php"; ?>
 
             <script src="bootstrap/js/jquery-1.11.0.min.js"></script>
             <script src="bootstrap/js/jquery-migrate-1.2.1.min.js"></script>

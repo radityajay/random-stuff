@@ -52,7 +52,7 @@ require_once $BASE_URL . "/models/OrderList.php";
                             
                         </td>
                         <td style="text-align: right;"><h5>Rp<?= number_format($data['total_bayar'], 2) ?></h4></td>
-                        <td style="text-align: center;"><h5><?= $data['tgl_transaksi'] ?></h4></td>
+                        <td style="text-align: center;"><h5><?= date("d F Y", strtotime($data['tgl_transaksi'])) ?></h4></td>
                         <!-- <td style="text-align: right;"><h5></h5></td> -->
                         <td style="text-align: center;">
                                         <a href="detail-trans.php?id=<?= $data['id_order'] ?>">

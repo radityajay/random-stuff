@@ -40,7 +40,7 @@
                             <?php
                                 foreach($store->all() as $data){
                             ?>
-                            <li><a class="text-decoration-none" href="store.php?id=<?= $data['id_store'] ?>"><?= $data['nama_store'] ?></a></li>
+                            <li><a class="text-decoration-none" href="store.php?id=<?= $data['id_store'] ?>"><?= $data['nama_store'] ?><br><p><?= $data['alamat_store'] ?></p></a></li>
                             <!-- <li><a class="text-decoration-none" href="#">Women</a></li> -->
                             <?php
                                 }
