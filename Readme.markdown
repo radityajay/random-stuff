@@ -33,6 +33,8 @@ Jika kalian belum menginstall XAMPP kalian bisa download [disini](https://www.ap
 12. produk      : Terdapat file CRUD table produk.
 13. inventaris  : Terdapat file CRUD table inventaris.
 14. bootstraps  : Tempat untuk CSS dan JS disimpan.
+15. image       : Tempat file gambar untuk interface.
+16. images      : Tempat untuk file gambar product.
 
 ## Default Account
 
